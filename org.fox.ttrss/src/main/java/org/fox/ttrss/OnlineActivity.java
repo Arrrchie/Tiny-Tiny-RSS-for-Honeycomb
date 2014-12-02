@@ -755,8 +755,10 @@ public class OnlineActivity extends CommonActivity {
 				Dialog dialog = new Dialog(this);
 
 				final EditText edit = new EditText(this);
+                edit.setText(m_prefs.getString("pref_search_prefix", ""));
+                edit.setSelection(edit.getText().length());
 
-				AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                AlertDialog.Builder builder = new AlertDialog.Builder(this)
 						.setTitle(R.string.search)
 						.setPositiveButton(getString(R.string.search),
 								new OnClickListener() {
