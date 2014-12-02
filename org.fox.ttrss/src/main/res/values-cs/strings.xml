@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="login_in_progress">Přihlašení k serveru</string>
-  <string name="app_name">Tiny Tiny RSS</string>
+  <string name="app_name">FTTRSS</string>
   <string name="login_need_configure">Prosím, nejprve nastavte aplikaci.</string>
   <string name="login_ready">Připraven na přihlášení.</string>
   <string name="login_login">Přihlásit</string>

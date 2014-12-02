@@ -2,7 +2,7 @@
 <resources>
 
     <string name="login_in_progress">Iniciando sesión…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">FTTRSS</string>
     <string name="login_need_configure">Por favor, configure primero la aplicación.</string>
     <string name="login_ready">Listo para iniciar sesión.</string>
     <string name="login_login">Iniciar sesión</string>
