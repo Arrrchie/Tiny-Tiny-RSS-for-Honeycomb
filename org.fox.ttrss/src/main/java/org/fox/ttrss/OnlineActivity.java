@@ -58,7 +58,7 @@ import java.util.List;
 public class OnlineActivity extends CommonActivity {
 	private final String TAG = this.getClass().getSimpleName();
 
-	private final static int TRIAL_DAYS = 8;
+//	private final static int TRIAL_DAYS = 8;
 	
 	protected SharedPreferences m_prefs;
 	protected Menu m_menu;
@@ -180,7 +180,7 @@ public class OnlineActivity extends CommonActivity {
 		if (isOffline) {
 			switchOfflineSuccess();			
 		} else {
-			checkTrial(false);
+			//checkTrial(false);
 			
 			/* if (getIntent().getExtras() != null) {
 				Intent i = getIntent();
@@ -475,7 +475,7 @@ public class OnlineActivity extends CommonActivity {
 		finish();
 	}
 	
-	public void checkTrial(boolean notify) {
+	/*public void checkTrial(boolean notify) {
         if (!BuildConfig.DEBUG) {
 
             boolean isTrial = getPackageManager().checkSignatures(
@@ -535,8 +535,9 @@ public class OnlineActivity extends CommonActivity {
             }
         }
 	}
-	
-	private void openUnlockUrl() {
+	*/
+
+	/*private void openUnlockUrl() {
 		try {
 			Intent intent = new Intent(Intent.ACTION_VIEW, 
 				Uri.parse("market://details?id=org.fox.ttrss.key"));
@@ -552,7 +553,8 @@ public class OnlineActivity extends CommonActivity {
 			}
 		}
 	}
-	
+	*/
+
 	@Override
 	public boolean onContextItemSelected(android.view.MenuItem item) {
 		/* AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
@@ -724,11 +726,11 @@ public class OnlineActivity extends CommonActivity {
 				}
 			}
 			return true;
-		case R.id.donate:
+		/*case R.id.donate:
 			if (true) {
 				openUnlockUrl();
 			}
-			return true;
+			return true;*/
 		case R.id.logout:
 			logout();
 			return true;
@@ -1287,13 +1289,13 @@ public class OnlineActivity extends CommonActivity {
 		List<PackageInfo> pkgs = getPackageManager()
 				.getInstalledPackages(0);
 
-		for (PackageInfo p : pkgs) {
+		/*for (PackageInfo p : pkgs) {
 			if ("org.fox.ttrss.key".equals(p.packageName)) {
 				Log.d(TAG, "license apk found");
 				menu.findItem(R.id.donate).setVisible(false);
 				break;
 			}
-		}
+		}*/
 		
 		return true;
 	}
