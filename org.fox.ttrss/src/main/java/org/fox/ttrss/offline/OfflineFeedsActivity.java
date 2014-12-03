@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import org.fox.ttrss.GlobalState;
 import org.fox.ttrss.R;
@@ -261,6 +262,7 @@ public class OfflineFeedsActivity extends OfflineActivity implements OfflineHead
 		}
 	}
 
+    private static long back_pressed;
     @Override
     public void onBackPressed() {
         if (m_drawerLayout != null && !m_drawerLayout.isDrawerOpen(Gravity.START) &&
@@ -268,8 +270,9 @@ public class OfflineFeedsActivity extends OfflineActivity implements OfflineHead
 
             m_drawerLayout.openDrawer(Gravity.START);
         } else {
-            super.onBackPressed();
-        }
+            if (back_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
+            else Toast.makeText(getBaseContext(), getString(R.string.close_app_warning), Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();        }
     }
 
     public void onFeedSelected(int feedId) {

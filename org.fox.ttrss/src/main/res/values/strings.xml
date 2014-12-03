@@ -261,4 +261,5 @@
     <string name="headline_display_mode_compact">Compact</string>
     <string name="pref_search_prefix">Searchprefix</string>
     <string name="pref_search_prefix_long">Prefix, to be automatically inserted in search dialog</string>
+    <string name="close_app_warning">Tap back again to close app</string>
 </resources>
